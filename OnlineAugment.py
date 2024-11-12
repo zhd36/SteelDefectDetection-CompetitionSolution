@@ -1,7 +1,8 @@
 import random
 import albumentations as A
 import numpy as np
-from PIL import Image
+from PIL import Image,ImageEnhance
+
 
 class OnlineAugment:
     def __init__(self, image_paths, label_paths, augment_prob=0.7, augmentation_probs=None):
