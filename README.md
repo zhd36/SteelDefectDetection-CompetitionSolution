@@ -21,7 +21,7 @@
 
 首先，请确保安装以下环境依赖项。可以使用以下命令来安装必要的 Python 包：
 
-# 安装项目依赖
+### 安装项目依赖
 pip install torch torchvision torchaudio
 pip install albumentations opencv-python-headless
 pip install tensorboard tqdm scikit-learn pillow numpy
