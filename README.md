@@ -9,7 +9,7 @@
 ## 项目结构
 
 - `OnlineAugment.py`: 根据猜测的B,C数据集的数据增强方法完成的在线数据增强脚本，与官方的增强方法存在gap，但测试下来误差不大，根据需要调整增强方法和比例。
-- `eval_with_aug.py`: 用在线增强的A数据集作为测试，可以检验模型的泛化性。
+- `eval_with_aug.py`: 用在线增强的A数据集作为测试，可以检验模型的泛化性，与排行榜分数接近。
 - `lovasz_softmax.py`: Lovasz-Softmax 损失函数的实现。该损失函数适用于分割任务，有助于优化 mIoU（mean Intersection over Union）指标。
 - `model.py`: 模型定义文件。基于 [U-2-Net](https://github.com/xuebinqin/U-2-Net) 结构，并加入深度可分离卷积，以减少计算量和参数量，提高模型效率。
 - `train.py`: 用于模型训练的脚本。在国赛中使用了 A 和 B 数据集，A 集数据使用在线数据增强，B 集数据采用简单增强策略，以提升模型在不同数据集上的表现。测试使用在线增强的A数据集。
@@ -26,6 +26,12 @@
 - [U-2-Net 论文](https://arxiv.org/pdf/2005.09007):项目中使用的模型论文。
 - [Lovasz-Softmax Loss](https://arxiv.org/abs/1705.08790): 专为优化 mIoU 而设计的分割任务损失函数。
 - [MobileNet: Depthwise Separable Convolutions](https://arxiv.org/abs/1704.04861): MobileNet 提供的深度可分离卷积技术思路，用于降低模型参数量和计算复杂度。
+
+
+## 吐槽
+
+这次比赛组织非常草台班子。从省赛初期的排行榜频频出现问题，到奇怪的U-net基线分数计算方式导致全是满分，再到省赛C数据集竟然包含在A数据集中（使得有心人能够逆向提取C的真实标签进行过拟合）。希望主办方在未来的竞赛中更加严谨，优化数据质量与评估体系，提升竞赛的公平性与专业性。
+
 
 ## 致谢
 
