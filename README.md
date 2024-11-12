@@ -16,3 +16,12 @@
 - `README.md`: 项目文档（即本文件），描述项目的结构、使用方法和相关细节。
 - `checkpoint/model.pth`: 以 A 数据集训练得到的最终模型，mIoU 达到 0.89。此模型在国赛中用作预训练模型，为后续的微调和模型改进提供了基础。
 - `checkpoint/model_B.pth`: 使用 `model.pth` 作为预训练模型，在 B 数据集上继续训练得到的模型，用于提升模型在 B 集上的分割精度。
+
+## 参考资料
+
+- [U-2-Net GitHub 仓库](https://github.com/xuebinqin/U-2-Net): 项目中使用的基础网络结构。
+- [Lovasz-Softmax Loss](https://arxiv.org/abs/1705.08790): 专为优化 mIoU 而设计的分割任务损失函数。
+
+## 致谢
+
+感谢竞赛主办方提供的支持，以及所有开源项目和研究对本项目的帮助。特别感谢 U-2-Net 的开源实现和 Lovasz-Softmax 损失函数的研究者。此外，感谢 **gpto1mini** 在代码编写过程中提供的帮助与支持。
