@@ -26,6 +26,7 @@
 pip install torch torchvision torchaudio
 pip install albumentations opencv-python-headless
 pip install tensorboard tqdm scikit-learn pillow numpy
+```
 
 我们所使用的版本为torch 2.4.1，cuda 11.8.
 
