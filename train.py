@@ -276,16 +276,6 @@ def train_model(model, train_loader, val_loader, criterion, optimizer, scheduler
             print(f"新的最佳 mIoU: {best_miou:.4f} 在 Epoch {best_epoch_miou}。模型已保存为 {save_path_miou}")
             logging.info(f"新的最佳 mIoU: {best_miou:.4f} 在 Epoch {best_epoch_miou}。模型已保存为 {save_path_miou}")
 
-        # 检查是否是新的最佳训练损失
-        if epoch_loss < best_loss:
-            best_loss = epoch_loss
-            best_epoch_loss = epoch + 1
-            # 保存最佳训练损失模型，保留四位小数
-            save_path_loss = f"checkpoint/{save_path}_loss.pth"
-            torch.save(model.state_dict(), save_path_loss)
-            print(f"新的最佳（最低）训练损失: {best_loss:.4f} 在 Epoch {best_epoch_loss}。模型已保存为 {save_path_loss}")
-            logging.info(f"新的最佳（最低）训练损失: {best_loss:.4f} 在 Epoch {best_epoch_loss}。模型已保存为 {save_path_loss}")
-
 
     writer.close()
     print(f"训练完成。最佳 mIoU: {best_miou:.4f} 出现在 Epoch {best_epoch_miou}")
