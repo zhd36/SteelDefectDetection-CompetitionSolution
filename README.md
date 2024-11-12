@@ -21,7 +21,7 @@
 
 - [U-2-Net GitHub 仓库](https://github.com/xuebinqin/U-2-Net): 项目中使用的基础网络结构。
 - [Lovasz-Softmax Loss](https://arxiv.org/abs/1705.08790): 专为优化 mIoU 而设计的分割任务损失函数。
-- [MobileNet: Depthwise Separable Convolutions](https://arxiv.org/abs/1704.04861): MobileNet 提出的深度可分离卷积技术，用于降低模型参数量和计算复杂度。
+- [MobileNet: Depthwise Separable Convolutions](https://arxiv.org/abs/1704.04861): MobileNet 提供的深度可分离卷积技术思路，用于降低模型参数量和计算复杂度。
 
 ## 致谢
 
